@@ -1,0 +1,41 @@
+@import '../../assets/scss/variables.scss';
+
+.quiz {
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__answers {
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border: 2px solid $primary-gray;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+
+      padding: 20px 40px;
+      margin-bottom: 24px;
+
+      &:hover {
+        border: 2px solid $primary-green;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+      &.selected {
+        border: 2px solid $primary-green;
+      }
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .quiz {
+    &__title {
+      margin-bottom: 40px;
+    }
+  }
+}
