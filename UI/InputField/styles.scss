@@ -1,0 +1,21 @@
+@import '../../assets/scss/variables.scss';
+
+.field {
+  border: 1px solid $primary-gray;
+  border-radius: 8px;
+  padding: 20px 24px;
+
+  &__error {
+    display: block;
+    font-size: 14px;
+    color: $primary-red;
+    padding-top: 8px;
+  }
+
+  &:focus {
+    border: 2px solid $primary-green;
+  }
+  &.invalid {
+    border: 2px solid $primary-red;
+  }
+}
