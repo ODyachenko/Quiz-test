@@ -1,0 +1,21 @@
+.progressbar {
+  position: relative;
+  height: 4px;
+  background: #fff;
+  border-radius: 2px;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.05));
+
+  &__inner {
+    width: 0;
+    height: 4px;
+    border-radius: 2px;
+    background-image: linear-gradient(
+      to right,
+      #4ad6bb,
+      #45cab0,
+      #41bda5,
+      #3cb19a,
+      #38a58f
+    );
+  }
+}

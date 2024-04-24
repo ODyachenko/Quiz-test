@@ -4,7 +4,13 @@ export type BtnType = {
   value: string;
   className?: string;
   handler?: () => void;
+  disabled?: boolean;
+};
+
+export type GoBackBtnType = {
+  className?: string;
   disabled: boolean;
+  handler: () => void;
 };
 
 export type RadioBtnType = {
@@ -27,4 +33,12 @@ export type QuizListType = {
   id: number;
   title: string;
   answers: AnswerType[];
+};
+
+export type MovieType = {
+  Title: string;
+  Poster: string;
+  Type: string;
+  Year: string;
+  imdbID: string;
 };

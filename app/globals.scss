@@ -4,6 +4,7 @@
 body {
   font-family: 'Noto Sans', sans-serif;
   font-size: 16px;
+  line-height: 1.2;
   color: $primary-black;
 }
 
@@ -11,9 +12,16 @@ body {
   max-width: 580px;
   padding: 0 25px;
   margin: 0 auto;
+
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .main {
+  background: url('../assets/img/wave.png') no-repeat top;
+
   padding: 25px 0;
 }
 

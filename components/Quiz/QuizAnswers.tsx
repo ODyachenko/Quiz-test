@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import { FC } from 'react';
 import QuizAnswersItem from './QuizAnswersItem';
 import { AnswerType } from '@/@types';
 
