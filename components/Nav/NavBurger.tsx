@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import './styles.scss';
 import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
 import { setIsShowNavbar } from '@/redux/slices/navSlice';
+import './styles.scss';
 
 const NavBurger: FC = () => {
   const { isShowNavbar } = useAppSelector((state) => state.nav);

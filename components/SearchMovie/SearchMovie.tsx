@@ -1,17 +1,17 @@
-import React, { FC, useEffect } from 'react';
+import { FC, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { BeatLoader } from 'react-spinners';
+import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
+import { useGetMovieByNameQuery } from '@/redux/API/movieSearchAPI';
 import {
   setMovieList,
   setSearchValue,
   setStep,
 } from '@/redux/slices/quizSlice';
-import { useForm } from 'react-hook-form';
-import { useAppDispatch, useAppSelector } from '@/hooks/hooks';
-import { useGetMovieByNameQuery } from '@/redux/API/movieSearchAPI';
 import InputField from '@/UI/InputField/InputField';
 import Btn from '@/UI/Btn/Btn';
 import { Inputs } from '@/@types';
 import './styles.scss';
-import { BeatLoader } from 'react-spinners';
 
 const SearchMovie: FC = () => {
   const {
@@ -23,7 +23,6 @@ const SearchMovie: FC = () => {
   });
   const { searchValue, step } = useAppSelector((state) => state.quiz);
   const dispatch = useAppDispatch();
-
   const { data, isLoading } = useGetMovieByNameQuery(searchValue, {
     skip: !searchValue,
   });
@@ -36,7 +35,7 @@ const SearchMovie: FC = () => {
   return (
     <>
       <form className="search">
-        <h1 className="search__title title">Enter movie title</h1>
+        <h2 className="search__title title">Enter movie title</h2>
         <InputField
           placeholder="Movie title here"
           name={'value'}
@@ -54,7 +53,6 @@ const SearchMovie: FC = () => {
       </form>
       <Btn
         type="submit"
-        // disabled={!searchValue}
         value={isLoading ? <BeatLoader color="#fff" /> : 'Continue'}
         handler={handleSubmit((formData) =>
           dispatch(setSearchValue(formData.value))

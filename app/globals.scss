@@ -10,14 +10,14 @@ body {
 
 .container {
   max-width: 580px;
-  padding: 0 25px;
-  margin: 0 auto;
-
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+
+  padding: 0 25px;
+  margin: 0 auto;
 }
 
 .main {

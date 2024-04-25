@@ -16,9 +16,9 @@ const Quiz: FC = () => {
 
   return (
     <>
-      <section className="quiz">
+      <div className="quiz">
         {step < quizList.length && <QuizItem {...quizList[step]} />}
-      </section>
+      </div>
       <Btn
         value="Continue"
         disabled={!selectedAnswer}

@@ -1,9 +1,9 @@
-import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { useAppSelector } from '@/hooks/hooks';
 import Movie from './Movie';
 import Btn from '@/UI/Btn/Btn';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';

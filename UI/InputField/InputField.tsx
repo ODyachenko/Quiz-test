@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
-import './styles.scss';
 import { InputFieldType } from '@/@types';
+import './styles.scss';
 
 const InputField: FC<InputFieldType> = ({
   placeholder,

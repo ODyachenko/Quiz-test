@@ -4,7 +4,7 @@ import notFound from '@/assets/img/not-found.png';
 
 const MoviesNotFound: FC = () => {
   return (
-    <section className="not-found">
+    <div className="not-found">
       <Image
         className="not-found__img"
         src={notFound}
@@ -12,8 +12,8 @@ const MoviesNotFound: FC = () => {
         width={135}
         height={135}
       />
-      <h1 className="not-found__title">Oops, no movie found</h1>
-    </section>
+      <h2 className="not-found__title">Oops, no movie found</h2>
+    </div>
   );
 };
 

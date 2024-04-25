@@ -12,6 +12,7 @@ const Movie: FC<MovieType> = ({ Poster, Year, Title }) => {
         alt={Title}
         width={300}
         height={453}
+        priority
       />
       <h2 className="movies__list-title">{Title}</h2>
       <span className="movies__list-year">{Year}</span>

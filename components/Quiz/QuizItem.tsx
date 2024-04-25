@@ -5,7 +5,7 @@ import { QuizListType } from '@/@types';
 const QuizItem: FC<QuizListType> = ({ title, answers }) => {
   return (
     <div className="quiz__item">
-      <h1 className="quiz__title title">{title}</h1>
+      <h2 className="quiz__title title">{title}</h2>
       <QuizAnswers answers={answers} />
     </div>
   );

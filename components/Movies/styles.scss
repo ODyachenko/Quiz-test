@@ -19,8 +19,8 @@
     }
 
     &-img {
-      // width: auto;
-      // height: auto;
+      width: 100%;
+      max-width: 200px;
       border-radius: 16px;
       box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
       margin: 0 auto 25px;
@@ -60,6 +60,7 @@
 
     &__list {
       &-img {
+        max-width: 250px;
         margin-bottom: 40px;
       }
       &-title {
@@ -74,6 +75,16 @@
     }
     &__title {
       font-size: 32px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .movies {
+    &__list {
+      &-img {
+        max-width: 300px;
+      }
     }
   }
 }
