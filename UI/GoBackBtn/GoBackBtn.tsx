@@ -8,6 +8,7 @@ const GoBackBtn: FC<GoBackBtnType> = ({ className, disabled, handler }) => {
       onClick={handler}
       disabled={disabled}
       className={`back-btn ${className ? className : ''}`}
+      aria-label="go back"
     >
       <svg
         width="10"
