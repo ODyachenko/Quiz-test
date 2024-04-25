@@ -10,11 +10,12 @@ body {
 
 .container {
   max-width: 580px;
-  min-height: calc(100vh - 50px);
+  height: calc(100vh - 50px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 20px;
+  overflow: auto;
 
   padding: 0 25px;
   margin: 0 auto;
