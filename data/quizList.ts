@@ -1,6 +1,6 @@
 import { QuizListType } from '@/@types';
 
-export const quizList = [
+export const quizList: QuizListType[] = [
   {
     id: 1,
     title: 'Your favorite movie genre?',

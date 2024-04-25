@@ -26,8 +26,9 @@ export type Inputs = {
 export type InputFieldType = {
   placeholder: string;
   name: string;
-  register: UseFormRegister<Inputs>;
-  errors: FieldErrors<Inputs>;
+  // register: UseFormRegister<Inputs>;
+  register: any;
+  errors: any;
 };
 
 export type AnswerType = {
@@ -48,4 +49,10 @@ export type MovieType = {
   Type: string;
   Year: string;
   imdbID: string;
+};
+
+export type ServerResType = {
+  Response: string;
+  Search: MovieType[];
+  totalResults: number;
 };

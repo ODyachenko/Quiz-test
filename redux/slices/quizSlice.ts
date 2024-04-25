@@ -1,4 +1,4 @@
-import { MovieType } from '@/@types';
+import { MovieType, ServerResType } from '@/@types';
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 
@@ -36,8 +36,12 @@ export const quizSlice = createSlice({
     setSearchValue: (state, action: PayloadAction<string>) => {
       state.searchValue = action.payload;
     },
-    setMovieList: (state, action: PayloadAction<MovieType[]>) => {
-      state.movieList = action.payload;
+    setMovieList: (state, action: PayloadAction<any>) => {
+      if (action.payload.Search) {
+        state.movieList = action.payload.Search;
+      } else {
+        state.movieList = [];
+      }
     },
   },
 });

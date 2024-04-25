@@ -29,7 +29,7 @@ const SearchMovie: FC = () => {
   });
 
   useEffect(() => {
-    data?.Search && dispatch(setMovieList(data.Search));
+    data && dispatch(setMovieList(data));
     data && dispatch(setStep(step + 1));
   }, [data]);
 
